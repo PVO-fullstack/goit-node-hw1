@@ -1,7 +1,6 @@
 const contacts = require("./contacts");
 const { program } = require("commander");
 
-// TODO: рефакторить
 async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
@@ -41,15 +40,3 @@ program.parse();
 const options = program.opts();
 
 invokeAction(options);
-
-// contacts.listContacts();
-
-// contacts.getContactById("C9sjBfCo4UJCWjzBnOtxl");
-
-// contacts.removeContact("rsKkOQUi80UsgVPCcLZZW");
-
-// contacts.addContact(
-//   "Alec Howard",
-//   "Donec.elementum@scelerisquescelerisquedui.net",
-//   "(748) 206-2688"
-// );
